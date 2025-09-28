@@ -1,0 +1,20 @@
+* text=auto
+
+# Force LF for text/code
+*.R      text eol=lf
+*.r      text eol=lf
+*.Rmd    text eol=lf
+*.qmd    text eol=lf
+*.sh     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.md     text eol=lf
+*.csv    text eol=lf
+*.tsv    text eol=lf
+
+# Binary files (no line-ending conversion)
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.zip    binary
+*.rds    binary

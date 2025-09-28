@@ -1,0 +1,29 @@
+
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "Airway RNA-seq Case Study: DESeq2 + Random Forest (Lucky)"
+authors:
+  - family-names: "Lucky"
+    given-names: ""
+version: "1.0.0"
+date-released: "2025-09-28"
+keywords:
+  - RNA-seq
+  - DESeq2
+  - Random Forest
+  - Bioinformatics
+  - Reproducibility
+repository-code: "https://github.com/<your-username>/icr-airway-case-study"
+references:
+  - type: software
+    title: "airway R/Bioconductor dataset"
+    authors:
+      - name: "Himes et al."
+    year: 2014
+    url: "https://bioconductor.org/packages/airway"
+  - type: software
+    title: "DESeq2"
+    authors:
+      - name: "Love, Huber, Anders"
+    year: 2014
+    url: "https://bioconductor.org/packages/DESeq2"
