@@ -2,7 +2,7 @@
 # airway_rnaseq_pipeline.R
 # End-to-end RNA-seq case study using Bioconductor `airway`
 # Outputs: results/*.csv, results/*.txt, figures/*.png
-
+R -q -e "install.packages('BiocManager', repos='https://cloud.r-project.org'); BiocManager::install(c('DESeq2','airway'), ask=FALSE, update=TRUE)"
 suppressPackageStartupMessages({
   library(DESeq2)
   library(airway)
