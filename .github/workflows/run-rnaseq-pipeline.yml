@@ -1,0 +1,30 @@
+
+name: run-rnaseq-pipeline
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/**.R'
+      - '.github/workflows/run-rnaseq-pipeline.yml'
+      - 'README.md'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    container:
+      image: bioconductor/bioconductor_docker:RELEASE_3_18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install CRAN extras
+        run: |
+          Rscript -e "install.packages(c('ggplot2','randomForest','pROC','matrixStats'), repos='https://cloud.r-project.org')"
+      - name: Run pipeline
+        run: Rscript scripts/airway_rnaseq_pipeline.R
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: outputs
+          path: |
+            figures
+            results
